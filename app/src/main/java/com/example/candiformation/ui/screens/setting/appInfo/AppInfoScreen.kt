@@ -1,6 +1,7 @@
 package com.example.candiformation.ui.screens.setting.appInfo
 
 
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
@@ -72,7 +73,8 @@ fun AppInfoTopLogo() {
             .fillMaxWidth()
             .padding(Constants.CONTENT_INNER_PADDING)
     ) {
-        Row(modifier = Modifier.fillMaxWidth())
+        Row(modifier = Modifier.fillMaxWidth()
+            .padding(top = 10.dp))
         {
             Icon(
                 imageVector = Icons.Default.HowToVote,
@@ -106,7 +108,7 @@ fun AppInfoTopLogo() {
 @Composable
 fun AppInfoScreenContent() {
     AppInfoScreenCard(title = "App version", description = "1.0")
-    AppInfoScreenCard(title = "Developers", description = "위성률\n신유빈\n오승언\n양용수")
+    AppInfoScreenCard(title = "Developers", description = "Wee SR\nShin YB\nOh SU\nYang YS")
     AppInfoScreenCard(title = "Contacts / Bug Report", description = "atn1su@gmail.com")
     AppInfoScreenCard(title = "From.", description = "Google Solution Challenge")
 }
@@ -120,8 +122,9 @@ fun AppInfoScreenCard(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 16.dp, vertical = 9.dp)
-            .clip(RoundedCornerShape(8.dp)),
-        backgroundColor = VeryLightGrey_type1
+            .border(width = 1.dp, color = Color.LightGray),
+        backgroundColor = Color.White,
+        elevation = 4.dp
     ) {
         Column(
             modifier = Modifier
